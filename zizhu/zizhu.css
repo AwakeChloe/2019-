@@ -1,0 +1,17 @@
+/*声明 WebFont*/
+@font-face {
+  font-family: 'pingfang';
+  src: url('./pingfang.eot');
+  src:
+    url('./pingfang.eot?#font-spider') format('embedded-opentype'),
+    url('./pingfang.woff') format('woff'),
+    url('./pingfang.ttf') format('truetype'),
+    url('./pingfang.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*使用选择器指定字体*/
+p {
+  font-family: 'pingfang';
+}

@@ -1,0 +1,117 @@
+@import '../../style/mixin';
+
+@font-face {
+  font-family: pingfang;
+  src:url('../../assets/pingfang.ttf'), url('../../assets/pingfang.eot');
+}
+
+@keyframes lighting
+{
+  from {opacity: 1;}
+  to {opacity: .5;}
+}
+
+.answer {
+  @include wh(100%, 100%);
+
+  button {
+    width: 36%;
+    height: 8%;
+    border-radius: 5px;
+    border: none;
+    position: absolute;
+    bottom: 0;
+    left: 56%;
+    opacity: 0;
+  }
+
+  img {
+    position: absolute;
+    z-index: -1;
+    @include wh(100%, 100%);
+  }
+
+  .confirmInput {
+    width: 36%;
+    height: 8%;
+    position: absolute;
+    bottom: 0;
+    left: 56%;
+  }
+
+  .answerFrame {
+    z-index: -1;
+    @include wh(90%, 65%);
+    @include positionCenter()
+  }
+
+  .question {
+    @include wh(90%, 65%);
+    @include positionCenter();
+
+    .numberImg {
+      @include wh(7%, 2%);
+      position: absolute;
+      top: 7%;
+      left: 8%;
+    }
+  }
+
+  .swiper-pagination {
+    width: 100%;
+    top: 8%;
+    left: 2%;
+
+    .swiper-pagination-bullet {
+      margin-left: 20px;
+      background-color: white;
+      width: 20px;
+      height: 20px;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: #adf5ff;
+    }
+  }
+
+  .swiper-button-prev, .swiper-button-next{
+    animation: lighting 1s infinite;
+    animation-direction: alternate;
+    outline: none;
+  }
+
+  .my-button-disabled{
+    display: none;
+  }
+
+  .swiper-container {
+    @include wh(70%, 80%);
+    @include positionCenter();
+
+    ul {
+      padding: 0;
+
+      .beSelect {
+        background-color: rgb(29, 72, 81);
+        border-radius: 15px;
+        border: 1px solid #adf5ff;
+      }
+
+      li {
+        margin-top: 13px;
+        padding-left: 7px;
+        font-family: pingfang;
+        color: white;
+        list-style-type: none;
+      }
+    }
+
+    h3 {
+      position: relative;
+      top: 7%;
+      font-family: pingfang;
+      color: #adf5ff;
+      height: 48%;
+    }
+    }
+}

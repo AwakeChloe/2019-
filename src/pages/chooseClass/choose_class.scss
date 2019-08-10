@@ -1,0 +1,34 @@
+@import '../../style/mixin';
+
+@keyframes mymove
+{
+  from {top: 23%;}
+  to {top: 27%;}
+}
+
+.chooseClass {
+  @include wh(100%, 100%);
+
+  .swiper-container {
+    @include wh(100%, 100%);
+
+    img {
+      @include wh(100%, 100%);
+      position: absolute;
+    }
+
+    .click {
+      @include wh(60%, 30%);
+      position: absolute;
+      left: 50%;
+      top: 25%;
+      transform: translate(-50%, 0);
+      animation: mymove 1s infinite;
+      animation-direction: alternate
+    }
+  }
+}
+
+html {
+  touch-action:none;
+}
