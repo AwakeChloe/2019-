@@ -28,7 +28,7 @@ class Home extends Component{
 			username: this.state.username
 		}
 		let result = await API.postUserName(data)
-		if (result.message !== 'ok') {
+		if (result.status === 0) {
 			this.setState(
 				{
 					registerFailed: true

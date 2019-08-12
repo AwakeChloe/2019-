@@ -1,7 +1,6 @@
 @import '../../../style/mixin';
 
 .pics {
-  @include wh(100px, 100px);
-  background-image: url('../../../assets/Chloe.er.JPG');
+  @include wh(80px, 80px);
   display: inline-block;
 }

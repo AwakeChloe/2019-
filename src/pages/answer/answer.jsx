@@ -45,7 +45,7 @@ class Answer extends Component {
 
 	nextQuestion = async (event) => {
 		let index = Number(event.target.getAttribute('index')) + 1
-		if (index < 5) {
+		if (index < 6) {
 			let data = {
 				question: event.target.getAttribute('question'),
 				question_id: index,
@@ -54,7 +54,7 @@ class Answer extends Component {
 				username: this.props.username
 			}
 			let result = await API.nextQuestion(data)
-			if (result.strike === true) {
+			if (result.spark === true) {
 				this.setState(
 					{
 						leave: false
@@ -67,23 +67,25 @@ class Answer extends Component {
 				this.setState({
 					selectIndex: -1
 				})
-				let question = this.state.question
-				question[index] = this.props.question[index].data
-				this.setState({
-					question: question
-				})
-				this.state.swiper.update()
-				this.state.swiper.slideTo(index, 500, false)
-			}
-		} else if (index > 4) {
-			this.setState(
-				{
-					leave: false
+				if (index > 4) {
+					this.setState(
+						{
+							leave: false
+						}
+					)
+					setTimeout(() => {
+						this.props.history.replace('/end')
+					}, 500)
+				} else if (index < 5) {
+					let question = this.state.question
+					question[index] = this.props.question[index].data
+					this.setState({
+						question: question
+					})
+					this.state.swiper.update()
+					this.state.swiper.slideTo(index, 500, false)
 				}
-			)
-			setTimeout(() => {
-				this.props.history.replace('/boom')
-			}, 500)
+			}
 		}
 	}
 
@@ -161,9 +163,9 @@ class Answer extends Component {
 							<div className='swiper-wrapper'>
 								{this.state.question.map((item, index) => (
 									<div className='swiper-slide' key={index}>
-										<h3>
+										<h4>
 											{item.question}
-										</h3>
+										</h4>
 										<ul>
 											<li onClick={this.toggle} index='1' value='A' className={this.state.selectIndex === 1 ? 'beSelect' : null}>A&#32;{item.A}</li>
 											<li onClick={this.toggle} index='2' value='B' className={this.state.selectIndex === 2 ? 'beSelect' : null}>B&#32;{item.B}</li>

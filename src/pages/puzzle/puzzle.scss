@@ -9,28 +9,27 @@ html {
   position: relative;
 
   .puzzleFrame {
-    width: 381px;
-    height: 504px;
+    width: 306px;
+    height: 409px;
     position: absolute;
-    top: calc(50% + 11px);
+    top: calc(50% + 9px);
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
   }
 
   button {
-    width: 24%;
-    height: 5%;
+    @include wh(23%, 4%);
     border-radius: 5px;
     border: none;
     position: absolute;
-    bottom: 16%;
-    left: 53%;
+    bottom: 23.5%;
+    left: 52%;
     opacity: 0;
   }
 
   .puzzleArea {
     font-size: 0;
-    @include wh(300px, 300px);
+    @include wh(240px, 240px);
     @include positionCenter()
   }
 

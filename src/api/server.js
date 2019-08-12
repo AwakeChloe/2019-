@@ -42,4 +42,30 @@ export default class Server {
       })
     })
   }
+  getPic (method, url, data) {
+    return new Promise((resolve, reject) => {
+      let _option = {
+        method,
+        url,
+        baseUrl: '',
+        timeout: 30000,
+        params: null,
+        data: data,
+        headers: null,
+        withCredentials: false, // 是否携带cookie发起请求
+        validateStatus: (status) => {
+          return status >= 200 && status < 300
+        }
+      }
+      axios.request(_option).then(res => {
+        resolve(typeof res.data === 'object' ? res.data : res.data)
+      }, error => {
+        if (error.response) {
+          reject(error.response.data)
+        } else {
+          reject(error)
+        }
+      })
+    })
+  }
 }

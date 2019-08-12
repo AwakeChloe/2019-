@@ -41,12 +41,12 @@
 
   .answerFrame {
     z-index: -1;
-    @include wh(90%, 65%);
+    @include wh(90%, 71%);
     @include positionCenter()
   }
 
   .question {
-    @include wh(90%, 65%);
+    @include wh(90%, 71%);
     @include positionCenter();
 
     .numberImg {
@@ -85,11 +85,15 @@
   }
 
   .swiper-container {
-    @include wh(70%, 80%);
+    @include wh(75%, 80%);
     @include positionCenter();
+    left: 51%;
 
     ul {
       padding: 0;
+      margin: 0;
+      position: relative;
+      top: 5%;
 
       .beSelect {
         background-color: rgb(29, 72, 81);
@@ -100,18 +104,20 @@
       li {
         margin-top: 13px;
         padding-left: 7px;
+        font-size: small;
         font-family: pingfang;
         color: white;
         list-style-type: none;
       }
     }
 
-    h3 {
+    h4 {
       position: relative;
-      top: 7%;
+      top: 12%;
       font-family: pingfang;
       color: #adf5ff;
-      height: 48%;
+      height: 40%;
+      margin: 0;
     }
-    }
+  }
 }

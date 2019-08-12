@@ -1,0 +1,58 @@
+@import '../../style/mixin';
+
+.end {
+  .backgroundImg {
+    @include wh(100%, 100%);
+    position: absolute;
+    z-index: -1;
+  }
+
+  .numberImg {
+    @include wh(7%, 1.8%);
+    position: absolute;
+    top: 23%;
+    left: 16%;
+    z-index: 2;
+  }
+
+  .endFrame {
+    @include wh(78%, 60%);
+    @include positionCenter();
+  }
+
+  .innerPicture {
+    @include wh(64%, 27%);
+    position: absolute;
+    top: 44%;
+    left: 51%;
+    transform: translate3d(-50%, -50%, 0);
+  }
+
+  .button {
+    position: absolute;
+    width: 32%;
+    height: 5%;
+    bottom: 11%;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  h5 {
+    position: absolute;
+    top: 58%;
+    width: 35%;
+    left: 17%;
+    color: #adf5ff;
+  }
+
+  button {
+    width: 32%;
+    height: 5%;
+    border: none;
+    position: absolute;
+    bottom: 11%;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    opacity: -1;
+  }
+}

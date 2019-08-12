@@ -21,7 +21,8 @@ class Puzzle extends Component {
 		leave: true,
 		randomPics: [],
 		reallyPics: [],
-		shadowShow: -1
+		shadowShow: -1,
+		backgroundImage: ''
 	}
 
 	sendPuzzle = async () => {
@@ -60,11 +61,11 @@ class Puzzle extends Component {
 	}
 
 	cutSliceX = index => {
-		return index % 3 * 100
+		return index % 3 * 80
 	}
 
 	cutSliceY = index => {
-		return Math.floor(index / 3) * 100
+		return Math.floor(index / 3) * 80
 	}
 
 	getDirection = (startX, startY, endX, endY) => {
@@ -92,6 +93,18 @@ class Puzzle extends Component {
 	}
 
 	componentDidMount () {
+		let number = Math.floor((Math.random() * 10) + 1)
+		if (number > 5) {
+			this.setState({
+					backgroundImage: "url('http://wx2.sinaimg.cn/mw690/005JHgrHgy1g5wrp3ebbdj306o06omxm.jpg')"
+				}
+			)
+		} else {
+			this.setState({
+					backgroundImage: "url('http://wx4.sinaimg.cn/mw690/005JHgrHgy1g5wrvji71ej306o06o0ta.jpg')"
+				}
+			)
+		}
 		switch (this.props.group) {
 			case '研发组':
 				this.setState({
@@ -146,17 +159,17 @@ class Puzzle extends Component {
 			switch (direction) {
 				case 1:
 					index = touchPics.getAttribute('index')
-					dom = document.elementFromPoint(startX, startY - 100)
+					dom = document.elementFromPoint(startX, startY - 80)
 					top = touchPics.style.top.split('p')
 					top = Number(top[0])
 					beTop = dom.style.top.split('p')
 					beTop = Number(beTop[0])
 					if (index !== null && dom.getAttribute('index') !== null) {
 						TweenMax.to(touchPics, .1, {
-							top: top - 100,
+							top: top - 80,
 						})
 						TweenMax.to(dom, .1, {
-							top: beTop + 100,
+							top: beTop + 80,
 						})
 						touchPics.setAttribute('index', index - 3)
 						dom.setAttribute('index', index)
@@ -170,17 +183,17 @@ class Puzzle extends Component {
 					break
 				case 2:
 					index = touchPics.getAttribute('index')
-					dom = document.elementFromPoint(startX, startY + 100)
+					dom = document.elementFromPoint(startX, startY + 80)
 					top = touchPics.style.top.split('p')
 					top = Number(top[0])
 					beTop = dom.style.top.split('p')
 					beTop = Number(beTop[0])
 					if (index !== null && dom.getAttribute('index') !== null) {
 						TweenMax.to(touchPics, .1, {
-							top: top + 100,
+							top: top + 80,
 						})
 						TweenMax.to(dom, .1, {
-							top: beTop - 100,
+							top: beTop - 80,
 						})
 						touchPics.setAttribute('index', Number(index) + 3)
 						dom.setAttribute('index', index)
@@ -194,17 +207,17 @@ class Puzzle extends Component {
 					break
 				case 3:
 					index = touchPics.getAttribute('index')
-					dom = document.elementFromPoint(startX - 100, startY)
+					dom = document.elementFromPoint(startX - 80, startY)
 					left = touchPics.style.left.split('p')
 					left = Number(left[0])
 					beLeft = dom.style.left.split('p')
 					beLeft = Number(beLeft[0])
 					if (index !== null && dom.getAttribute('index') !== null) {
 						TweenMax.to(touchPics, .1, {
-							left: left - 100,
+							left: left - 80,
 						})
 						TweenMax.to(dom, .1, {
-							left: beLeft + 100,
+							left: beLeft + 80,
 						})
 						touchPics.setAttribute('index', Number(index) - 1)
 						dom.setAttribute('index', index)
@@ -218,17 +231,17 @@ class Puzzle extends Component {
 					break
 				case 4:
 					index = touchPics.getAttribute('index')
-					dom = document.elementFromPoint(startX + 100, startY)
+					dom = document.elementFromPoint(startX + 80, startY)
 					left = touchPics.style.left.split('p')
 					left = Number(left[0])
 					beLeft = dom.style.left.split('p')
 					beLeft = Number(beLeft[0])
 					if (index !== null && dom.getAttribute('index') !== null) {
 						TweenMax.to(touchPics, .1, {
-							left: left + 100,
+							left: left + 80,
 						})
 						TweenMax.to(dom, .1, {
-							left: beLeft - 100,
+							left: beLeft - 80,
 						})
 						touchPics.setAttribute('index', Number(index) + 1)
 						dom.setAttribute('index', index)
@@ -258,7 +271,7 @@ class Puzzle extends Component {
 					<img className='puzzleFrame' src={puzzleFrame} alt='拼图框'/>
 					<div className='puzzleArea'>
 						{this.state.randomPics.map((picsNumber, index) => (
-							<Pics key={index} index={index} positionX={this.cutSliceX(picsNumber)} positionY={this.cutSliceY(picsNumber)}/>
+							<Pics key={index} index={index} backgroundImage={this.state.backgroundImage} positionX={this.cutSliceX(picsNumber)} positionY={this.cutSliceY(picsNumber)}/>
 						))}
 					</div>
 					<button onClick={this.sendPuzzle}>
