@@ -18,12 +18,12 @@ html {
   }
 
   button {
-    @include wh(23%, 4%);
+    @include wh(36%, 11%);
     border-radius: 5px;
     border: none;
     position: absolute;
-    bottom: 23.5%;
-    left: 52%;
+    bottom: -23.5%;
+    left: 54%;
     opacity: 0;
   }
 

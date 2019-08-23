@@ -265,12 +265,12 @@ class Puzzle extends Component {
 					<img src={this.state.backgroundImg} alt='背景'/>
 					<img className='puzzleFrame' src={puzzleFrame} alt='拼图框'/>
 					<div className='puzzleArea'>
+						<button onClick={this.sendPuzzle}>
+						</button>
 						{this.state.randomPics.map((picsNumber, index) => (
 							<Pics key={index} index={index} backgroundImage={this.state.backgroundImage} positionX={this.cutSliceX(picsNumber)} positionY={this.cutSliceY(picsNumber)}/>
 						))}
 					</div>
-					<button onClick={this.sendPuzzle}>
-					</button>
 					{this.props.login ? null : <Redirect to='/'/>}
 				</div>
 			</CSSTransition>
