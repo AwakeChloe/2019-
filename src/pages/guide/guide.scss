@@ -1,0 +1,25 @@
+@import '../../style/mixin';
+
+html {
+  touch-action:none;
+}
+
+.guide {
+  @include wh(100%, 100%);
+
+  img {
+    position: absolute;
+    @include wh(100%, 100%);
+    z-index: -1;
+  }
+
+  button {
+    @include wh(25%, 5%);
+    border-radius: 15px;
+    border: none;
+    position: absolute;
+    bottom: 21.5%;
+    left: 52.5%;
+    opacity: 0;
+  }
+}

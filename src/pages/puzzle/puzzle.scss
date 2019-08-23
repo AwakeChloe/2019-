@@ -1,0 +1,41 @@
+@import '../../style/mixin';
+
+html {
+  touch-action:none;
+}
+
+.puzzle {
+  @include wh(100%, 100%);
+  position: relative;
+
+  .puzzleFrame {
+    width: 306px;
+    height: 409px;
+    position: absolute;
+    top: calc(50% + 9px);
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  }
+
+  button {
+    @include wh(23%, 4%);
+    border-radius: 5px;
+    border: none;
+    position: absolute;
+    bottom: 23.5%;
+    left: 52%;
+    opacity: 0;
+  }
+
+  .puzzleArea {
+    font-size: 0;
+    @include wh(240px, 240px);
+    @include positionCenter()
+  }
+
+  img {
+    @include wh(100%, 100%);
+    position: absolute;
+  }
+}
+

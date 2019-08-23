@@ -1,0 +1,26 @@
+@import '../../style/mixin';
+
+.boom {
+  button {
+    width: 26%;
+    height: 5%;
+    border-radius: 5px;
+    border: none;
+    position: absolute;
+    bottom: 32%;
+    left: 56%;
+    opacity: 0;
+  }
+
+  .backgroundImg {
+    @include wh(100%, 100%);
+    position: absolute;
+    z-index: -1;
+  }
+
+  .boom {
+    @include wh(90%, 45%);
+    @include positionCenter();
+    z-index: -1;
+  }
+}

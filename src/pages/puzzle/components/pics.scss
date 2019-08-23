@@ -1,0 +1,6 @@
+@import '../../../style/mixin';
+
+.pics {
+  @include wh(80px, 80px);
+  display: inline-block;
+}

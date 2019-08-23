@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, #root{
+  height: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.fade-appear{
+  opacity: 0;
+}
+
+.fade-appear.fade-appear-active{
+  opacity: 1;
+  transition: 500ms ease-out;
+}
+
+/*设置退场前透明度为1，放缩为1*/
+.fade-exit{
+  opacity: 1;
+}
+
+/*设置退场过程中 透明度为0，放缩为0，放缩的位置默认是中间，所以不设置也可以，
+持续时间为500ms，时间曲是ease-out */
+.fade-exit.fade-exit-active{
+  opacity:0;
+  transition: 500ms ease-out;
+}
+
