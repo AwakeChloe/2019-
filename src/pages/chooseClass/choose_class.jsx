@@ -15,7 +15,7 @@ import 'swiper/dist/css/swiper.min.css'
 import API from '@/api/api'
 
 
-class ChooseClass extends Component{
+class ChooseClass extends Component {
 	state = {
 		leave: true
 	}
