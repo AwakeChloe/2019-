@@ -8,6 +8,7 @@ const chooseClass = asyncComponent(() => import("@/pages/chooseClass/choose_clas
 const answer = asyncComponent(() => import("@/pages/answer/answer"))
 const boom = asyncComponent(() => import("@/pages/boom/boom"))
 const end = asyncComponent(() => import("@/pages/end/end"))
+const loading = asyncComponent(() => import("@/pages/loading/loading"))
 
 export default class RouteConfig extends Component {
 	render () {
@@ -20,7 +21,8 @@ export default class RouteConfig extends Component {
 					<Route path="/chooseClass" component={chooseClass}/>
 					<Route path="/answer" component={answer}/>
 					<Route path="/end" component={end}/>
-					<Route path="/" exact component={home}/>
+					<Route path="/home" component={home}/>
+					<Route path="/" exact component={loading}/>
 				</Switch>
 			</HashRouter>
 		)

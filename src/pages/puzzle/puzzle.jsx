@@ -10,7 +10,6 @@ import puzzleFrame from '../../assets/components/puzzleFrame.png'
 import API from '@/api/api'
 
 class Puzzle extends Component {
-
 	state = {
 		backgroundImg: '',
 		leave: true,

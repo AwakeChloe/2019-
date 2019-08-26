@@ -1,0 +1,11 @@
+@import '../../style/mixin';
+
+#lottie {
+  @include positionCenter();
+  width: 500px;
+}
+
+.progress {
+  @include positionCenter();
+  z-index: 2;
+}
