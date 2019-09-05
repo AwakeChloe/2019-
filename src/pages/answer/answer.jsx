@@ -48,6 +48,9 @@ class Answer extends Component {
 				groups: this.props.group,
 				username: this.props.username
 			}
+			if (!this.state.answer) {
+				return
+			}
 			let result = await API.nextQuestion(data)
 			if (result.spark === true) {
 				this.setState(
@@ -60,7 +63,8 @@ class Answer extends Component {
 				}, 500)
 			} else if (result.status === 1) {
 				this.setState({
-					selectIndex: -1
+					selectIndex: -1,
+					answer: '',
 				})
 				if (index > 4) {
 					this.setState(
@@ -158,9 +162,9 @@ class Answer extends Component {
 							<div className='swiper-wrapper'>
 								{this.state.question.map((item, index) => (
 									<div className='swiper-slide' key={index}>
-										<h4>
+										<h5>
 											{item.question}
-										</h4>
+										</h5>
 										<ul>
 											<li onClick={this.toggle} index='1' value='A' className={this.state.selectIndex === 1 ? 'beSelect' : null}>A&#32;{item.A}</li>
 											<li onClick={this.toggle} index='2' value='B' className={this.state.selectIndex === 2 ? 'beSelect' : null}>B&#32;{item.B}</li>
