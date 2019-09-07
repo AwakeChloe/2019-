@@ -77,7 +77,12 @@
   .swiper-button-prev, .swiper-button-next{
     animation: lighting 1s infinite;
     animation-direction: alternate;
+    background-image: url("../../assets/components/introduce_arrow.svg");
     outline: none;
+  }
+
+  .swiper-button-next {
+    transform: rotateY(180deg);
   }
 
   .my-button-disabled{

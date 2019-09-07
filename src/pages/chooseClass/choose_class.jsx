@@ -24,7 +24,11 @@ class ChooseClass extends Component {
 		// eslint-disable-next-line no-unused-vars
 		let swiper = new Swiper('.swiper-container', {
 			loop: true,
-			effect : 'flip'
+			effect : 'flip',
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			}
 		})
 	}
 
@@ -61,6 +65,10 @@ class ChooseClass extends Component {
 			>
 				<div className='chooseClass'>
 					<div className='swiper-container'>
+						<div className="swiper-button-prev">
+						</div>
+						<div className="swiper-button-next">
+						</div>
 						<div className='swiper-wrapper'>
 							<div className='swiper-slide'>
 								<img src='http://wx3.sinaimg.cn/mw690/005JHgrHgy1g677ddcm1qj30af0ijdh4.jpg' alt='开发'/>

@@ -6,6 +6,12 @@
   to {top: 27%;}
 }
 
+@keyframes lighting
+{
+  from {opacity: 1;}
+  to {opacity: .5;}
+}
+
 .chooseClass {
   @include wh(100%, 100%);
 
@@ -15,6 +21,17 @@
     img {
       @include wh(100%, 100%);
       position: absolute;
+    }
+
+    .swiper-button-prev, .swiper-button-next{
+      animation: lighting 1s infinite;
+      animation-direction: alternate;
+      background-image: url("../../assets/components/introduce_arrow.svg");
+      outline: none;
+    }
+
+    .swiper-button-next {
+      transform: rotateY(180deg);
     }
 
     .click {
