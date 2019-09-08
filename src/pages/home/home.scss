@@ -55,14 +55,17 @@ html {
   }
 
   button {
-    @include wh(35%, 5%);
-    border-radius: 15px;
+    @include wh(145px, 44px);
+    background-image: url("../../assets/components/进入游戏.png");
+    color: #6bdde9;
+    font-weight: bold;
+    border-radius: 23px;
     border: none;
     position: absolute;
     bottom: 9.5%;
     left: 50%;
     transform: translate(-50%, 0);
-    opacity: 0;
+    text-align: center;
   }
 
   p {

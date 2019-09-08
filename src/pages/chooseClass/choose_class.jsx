@@ -89,7 +89,7 @@ class ChooseClass extends Component {
 								</div>
 							</div>
 							<div className='swiper-slide'>
-								<img src='http://wx1.sinaimg.cn/mw690/005JHgrHgy1g677dgd6d5j30af0ijwfo.jpg' alt='产品'/>
+								<img src='http://wx4.sinaimg.cn/mw690/005JHgrHgy1g6rwwa8qjij30af0ijmxc.jpg' alt='产品'/>
 								<div className='click' onClick={this.sendClass}>
 									<img className='planet' index='产品组' src={planetProducts} alt='产品星球'/>
 								</div>

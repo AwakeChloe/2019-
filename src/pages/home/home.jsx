@@ -3,7 +3,6 @@ import './home.scss'
 import '../../index.css'
 import { connect } from 'react-redux'
 import inputImg from '../../assets/components/input.png'
-import buttonImg from '../../assets/components/button.png'
 import {CSSTransition} from "react-transition-group"
 import {hasRegister} from '@/store/action'
 import API from '@/api/api'
@@ -74,7 +73,6 @@ class Home extends Component {
 							</div>
 						</div>
 						{this.state.registerFailed ? <p>该用户名已被占用，请重新输入</p> : ''}
-						<img className='button' src={buttonImg} alt='button'/>
 						<button onClick={this.login}>进入游戏</button>
 					</div>
 				</CSSTransition>

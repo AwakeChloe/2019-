@@ -263,9 +263,10 @@ class Puzzle extends Component {
 				<div className='puzzle'>
 					<img src={this.state.backgroundImg} alt='背景'/>
 					<img className='puzzleFrame' src={puzzleFrame} alt='拼图框'/>
+					<button onClick={this.sendPuzzle}>
+						确认提交
+					</button>
 					<div className='puzzleArea'>
-						<button onClick={this.sendPuzzle}>
-						</button>
 						{this.state.randomPics.map((picsNumber, index) => (
 							<Pics key={index} index={index} backgroundImage={this.state.backgroundImage} positionX={this.cutSliceX(picsNumber)} positionY={this.cutSliceY(picsNumber)}/>
 						))}

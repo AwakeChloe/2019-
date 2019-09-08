@@ -14,7 +14,7 @@ import page5 from '../../assets/components/005.png'
 import page6 from '../../assets/components/Admin.png'
 import page7 from '../../assets/components/answerFrame.png'
 import page8 from '../../assets/components/boom.png'
-import page9 from '../../assets/components/button.png'
+import page9 from '../../assets/components/进入游戏.png'
 import page10 from '../../assets/components/confirmInput.png'
 import page11 from '../../assets/components/designer.png'
 import page12 from '../../assets/components/end1.png'
@@ -90,7 +90,7 @@ class LottieControl extends Component {
 			page19,
 			page20,
 			'http://wx1.sinaimg.cn/mw690/005JHgrHgy1g677dh25a7j30af0ijmz5.jpg',
-			'http://wx1.sinaimg.cn/mw690/005JHgrHgy1g677dgd6d5j30af0ijwfo.jpg',
+			'http://wx4.sinaimg.cn/mw690/005JHgrHgy1g6rwwa8qjij30af0ijmxc.jpg',
 			'http://wx1.sinaimg.cn/mw690/005JHgrHgy1g677dfwgrmj30af0ijjtk.jpg',
 			'http://wx3.sinaimg.cn/mw690/005JHgrHgy1g677df6yckj30af0ijmyp.jpg',
 			'http://wx1.sinaimg.cn/mw690/005JHgrHgy1g677demsgoj30af0ij75m.jpg',

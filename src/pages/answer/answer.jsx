@@ -9,7 +9,6 @@ import two from '../../assets/components/002.png'
 import three from '../../assets/components/003.png'
 import four from '../../assets/components/004.png'
 import five from '../../assets/components/005.png'
-import confirmInput from '../../assets/components/confirmInput.png'
 import answerFrame from '../../assets/components/answerFrame.png'
 import Swiper from 'swiper/dist/js/swiper.js'
 import 'swiper/dist/css/swiper.min.css'
@@ -162,9 +161,9 @@ class Answer extends Component {
 							<div className='swiper-wrapper'>
 								{this.state.question.map((item, index) => (
 									<div className='swiper-slide' key={index}>
-										<h5>
+										<h3>
 											{item.question}
-										</h5>
+										</h3>
 										<ul>
 											<li onClick={this.toggle} index='1' value='A' className={this.state.selectIndex === 1 ? 'beSelect' : null}>A&#32;{item.A}</li>
 											<li onClick={this.toggle} index='2' value='B' className={this.state.selectIndex === 2 ? 'beSelect' : null}>B&#32;{item.B}</li>
@@ -173,7 +172,6 @@ class Answer extends Component {
 										<button index={index} question={item.question} onClick={this.nextQuestion}>
 											确定提交
 										</button>
-										<img className='confirmInput' src={confirmInput} alt='确认提交'/>
 									</div>
 								))}
 							</div>

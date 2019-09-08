@@ -8,6 +8,18 @@ html {
   @include wh(100%, 100%);
   position: relative;
 
+  button {
+    @include wh(92px, 30px);
+    background-image: url("../../assets/components/确定.png");
+    border-radius: 5px;
+    border: none;
+    color: #DCDFE1;
+    font-weight: bold;
+    position: absolute;
+    bottom: 23.4%;
+    left: 51%;
+  }
+
   .puzzleFrame {
     width: 306px;
     height: 409px;
@@ -15,16 +27,6 @@ html {
     top: calc(50% + 9px);
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
-  }
-
-  button {
-    @include wh(36%, 11%);
-    border-radius: 5px;
-    border: none;
-    position: absolute;
-    bottom: -23.5%;
-    left: 54%;
-    opacity: 0;
   }
 
   .puzzleArea {

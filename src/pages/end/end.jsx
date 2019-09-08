@@ -109,6 +109,9 @@ class End extends Component {
 					<h5 className='endText'>
 						{this.state.endFrameText}
 					</h5>
+					<p>
+						重新游戏
+					</p>
 					<button onClick={this.goBack}>
 					</button>
 					{this.props.login ? null : <Redirect to='/'/>}
