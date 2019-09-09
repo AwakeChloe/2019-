@@ -15,6 +15,12 @@
 .chooseClass {
   @include wh(100%, 100%);
 
+  .backgroundImg {
+    @include wh(100%, 100%);
+    position: absolute;
+    z-index: -1;
+  }
+
   .swiper-container {
     @include wh(100%, 100%);
 

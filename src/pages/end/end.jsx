@@ -12,6 +12,7 @@ import three from '../../assets/components/003.png'
 import four from '../../assets/components/004.png'
 import five from '../../assets/components/005.png'
 import end1 from  '../../assets/components/end1.png'
+import copy from  '../../assets/components/copy.jpg'
 
 class End extends Component {
 	state = {
@@ -25,6 +26,14 @@ class End extends Component {
 
 	goBack = () => {
 		location.reload()
+	}
+
+	copyUrl2 = () => {
+		// eslint-disable-next-line no-console
+		console.log(1)
+		let input = document.getElementById('biao')
+		input.select()
+		document.execCommand('Copy', false, null)
 	}
 
 	componentDidMount () {
@@ -106,12 +115,15 @@ class End extends Component {
 					<img className='endFrame' src={end1} alt='结尾框'/>
 					<img className='innerPicture' src={this.state.innerPicture} alt='框内图'/>
 					<img className='button' src={button} alt='按钮'/>
+					<img className='copy' onClick={this.copyUrl2} src={copy} alt='按钮'/>
 					<h5 className='endText'>
 						{this.state.endFrameText}
 					</h5>
 					<p>
 						重新游戏
 					</p>
+					<input value='http://promote.mehacker.cn' id='biao'>
+					</input>
 					<button onClick={this.goBack}>
 					</button>
 					{this.props.login ? null : <Redirect to='/'/>}

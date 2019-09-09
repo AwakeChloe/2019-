@@ -10,10 +10,8 @@ body {
 
 html, #root{
   position: fixed;
-  width: 100%;
   left: 0;
   top: 0;
-  height: 100%;
 }
 
 code {
@@ -33,6 +31,10 @@ code {
 /*设置退场前透明度为1，放缩为1*/
 .fade-exit{
   opacity: 1;
+}
+
+button {
+  outline: none;
 }
 
 /*设置退场过程中 透明度为0，放缩为0，放缩的位置默认是中间，所以不设置也可以，

@@ -2,12 +2,9 @@
 
 html {
   touch-action:none;
-  z-index: -1;
 }
 
 .home {
-  @include wh(100%, 100%);
-
   .button {
     @include wh(35%, 5%);
     position: absolute;

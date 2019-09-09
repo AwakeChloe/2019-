@@ -37,6 +37,14 @@
     transform: translate3d(-50%, 0, 0);
   }
 
+  .copy {
+    position: absolute;
+    width: 11%;
+    height: 6%;
+    bottom: 11%;
+    left: 75%;
+  }
+
   h5 {
     position: absolute;
     margin: 0;
@@ -50,8 +58,15 @@
     position: absolute;
     margin: 0;
     top: 85%;
-    left: 42%;
+    left: 43%;
     color: #adf5ff;
+    font-size: small;
+  }
+
+  #biao {
+    opacity: 0;
+    position: absolute;
+    left: -10000px;
   }
 
   button {

@@ -64,6 +64,7 @@ class ChooseClass extends Component {
 				timeout={500}
 			>
 				<div className='chooseClass'>
+					<img className='backgroundImg' src='http://wx3.sinaimg.cn/mw690/005JHgrHgy1g6tmmi0nxsj30b40jmq3u.jpg' alt='背景'/>
 					<div className='swiper-container'>
 						<div className="swiper-button-prev">
 						</div>

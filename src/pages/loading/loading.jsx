@@ -26,6 +26,7 @@ import page17 from '../../assets/components/operation.png'
 import page18 from '../../assets/components/product.png'
 import page19 from '../../assets/components/puzzleFrame.png'
 import page20 from '../../assets/components/restartGame.png'
+import page21 from '../../assets/components/确定.png'
 
 class LottieControl extends Component {
 	state = {
@@ -66,7 +67,9 @@ class LottieControl extends Component {
 			'page32',
 			'page33',
 			'page34',
-			'page35'
+			'page35',
+			'page36',
+			'page37'
 		],
 		pictureSrc: [
 			page1,
@@ -89,6 +92,7 @@ class LottieControl extends Component {
 			page18,
 			page19,
 			page20,
+			page21,
 			'http://wx1.sinaimg.cn/mw690/005JHgrHgy1g677dh25a7j30af0ijmz5.jpg',
 			'http://wx4.sinaimg.cn/mw690/005JHgrHgy1g6rwwa8qjij30af0ijmxc.jpg',
 			'http://wx1.sinaimg.cn/mw690/005JHgrHgy1g677dfwgrmj30af0ijjtk.jpg',
@@ -104,6 +108,7 @@ class LottieControl extends Component {
 			'http://wx1.sinaimg.cn/mw690/005JHgrHgy1g677d9obdyj30af0ijq4e.jpg',
 			'http://wx4.sinaimg.cn/mw690/005JHgrHgy1g5wrvji71ej306o06o0ta.jpg',
 			'http://wx2.sinaimg.cn/mw690/005JHgrHgy1g5wrp3ebbdj306o06omxm.jpg',
+			'http://wx3.sinaimg.cn/mw690/005JHgrHgy1g6tmmi0nxsj30b40jmq3u.jpg'
 		]
 	};
 
