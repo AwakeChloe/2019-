@@ -47,7 +47,8 @@ class Puzzle extends Component {
 		})
 		setTimeout(() => {
 			this.setState({
-				randomPics: newState.load
+				randomPics: newState.load,
+				reallyPics: newState.load
 			})
 		}, 100)
 	}
