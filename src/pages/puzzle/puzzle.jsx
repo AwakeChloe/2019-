@@ -42,12 +42,19 @@ class Puzzle extends Component {
 		let newState = {}
 		newState.randomPics = []
 		newState.load = this.state.randomPics.concat()
+		newState.reallyPics = this.state.randomPics.concat()
 		this.setState({
 			randomPics: newState.randomPics
 		})
+		let pics = document.getElementsByClassName('pics')
+		for (let i; i < 9; i++) {
+			pics[i].style.top = 0
+			pics[i].style.left = 0
+		}
 		setTimeout(() => {
 			this.setState({
-				randomPics: newState.load
+				randomPics: newState.load,
+				reallyPics: newState.reallyPics
 			})
 		}, 100)
 	}
@@ -280,9 +287,9 @@ class Puzzle extends Component {
 					<img src={this.state.backgroundImg} alt='背景'/>
 					<img className='puzzleFrame' src={puzzleFrame} alt='拼图框'/>
 					<div className='frame'>
-						{/*<button className='restart' onClick={this.restart}>*/}
-						{/*	重置拼图*/}
-						{/*</button>*/}
+						<button className='restart' onClick={this.restart}>
+							重置拼图
+						</button>
 						<button className='confirm' onClick={this.sendPuzzle}>
 							确认提交
 						</button>
