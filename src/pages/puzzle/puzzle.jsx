@@ -4,7 +4,7 @@ import './puzzle.scss'
 import {CSSTransition} from "react-transition-group"
 import '../../index.css'
 import {connect} from 'react-redux'
-// import {Redirect} from 'react-router-dom'
+import {Redirect} from 'react-router-dom'
 import {TweenMax} from "gsap";
 import puzzleFrame from '../../assets/components/puzzleFrame.png'
 import API from '@/api/api'
@@ -292,7 +292,7 @@ class Puzzle extends Component {
 							<Pics key={index} index={index} backgroundImage={this.state.backgroundImage} positionX={this.cutSliceX(picsNumber)} positionY={this.cutSliceY(picsNumber)}/>
 						))}
 					</div>
-					{this.props.login ? null : null}
+					{this.props.login ? null : <Redirect to='/'/>}
 				</div>
 			</CSSTransition>
 		)
