@@ -25,7 +25,7 @@ class End extends Component {
 	}
 
 	goBack = () => {
-		this.props.history.replace('/')
+		window.location = 'http://promote.mehacker.cn'
 	}
 
 	copyUrl2 = () => {
