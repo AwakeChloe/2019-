@@ -41,8 +41,32 @@
       outline: none;
     }
 
+    .my-button-disabled{
+      display: none;
+    }
+
     .swiper-button-next {
       transform: rotateY(180deg);
+    }
+
+    [index = 设计组] {
+      transform: translate(-21px, 0);
+    }
+
+    [index = 运营组] {
+      transform: translate(-21px, 0);
+    }
+
+    [index = 产品组] {
+      transform: translate(10px, 0);
+    }
+
+    [index = 研发组] {
+      transform: translate(10px, 0);
+    }
+
+    [index = 行政组] {
+      transform: translate(28px, 0);
     }
 
     .click {

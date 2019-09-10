@@ -23,11 +23,14 @@ class ChooseClass extends Component {
 	componentDidMount () {
 		// eslint-disable-next-line no-unused-vars
 		let swiper = new Swiper('.swiper-container', {
-			loop: true,
+			loop: false,
 			effect : 'flip',
 			navigation: {
 				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev'
+				prevEl: '.swiper-button-prev',
+				hideOnClick: true,
+				hiddenClass: 'my-button-hidden',
+				disabledClass: 'my-button-disabled'
 			}
 		})
 	}

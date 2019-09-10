@@ -25,7 +25,7 @@ class End extends Component {
 	}
 
 	goBack = () => {
-		location.reload()
+		this.props.history.replace('/')
 	}
 
 	copyUrl2 = () => {

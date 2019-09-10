@@ -8,20 +8,40 @@ html {
   @include wh(100%, 100%);
   position: relative;
 
-  button {
-    @include wh(38%, 12%);
+  .confirm {
+    @include wh(92px, 30px);
     background-image: url("../../assets/components/确定.png");
-    opacity: 0;
     border-radius: 5px;
     border: none;
     color: #DCDFE1;
-    font-weight: bold;
+    background-color: white;
     position: absolute;
-    bottom: -23.6%;
-    left: 53%;
+    bottom: 9%;
+    left: 52%;
+  }
+
+  .restart {
+    @include wh(92px, 30px);
+    background-image: url("../../assets/components/确定.png");
+    border-radius: 5px;
+    border: none;
+    color: #DCDFE1;
+    background-color: white;
+    position: absolute;
+    bottom: 9%;
+    left: 19%;
   }
 
   .puzzleFrame {
+    width: 306px;
+    height: 409px;
+    position: absolute;
+    top: calc(50% + 9px);
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  }
+
+  .frame {
     width: 306px;
     height: 409px;
     position: absolute;

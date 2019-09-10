@@ -4,7 +4,7 @@ import './puzzle.scss'
 import {CSSTransition} from "react-transition-group"
 import '../../index.css'
 import {connect} from 'react-redux'
-import {Redirect} from 'react-router-dom'
+// import {Redirect} from 'react-router-dom'
 import {TweenMax} from "gsap";
 import puzzleFrame from '../../assets/components/puzzleFrame.png'
 import API from '@/api/api'
@@ -33,7 +33,23 @@ class Puzzle extends Component {
 			setTimeout(() => {
 				this.props.history.replace('/end')
 			}, 500)
+		} else {
+			alert('你的拼图有错误')
 		}
+	}
+
+	restart = () => {
+		let newState = {}
+		newState.randomPics = []
+		newState.load = this.state.randomPics.concat()
+		this.setState({
+			randomPics: newState.randomPics
+		})
+		setTimeout(() => {
+			this.setState({
+				randomPics: newState.load
+			})
+		}, 100)
 	}
 
 	initData = () => {
@@ -263,15 +279,20 @@ class Puzzle extends Component {
 				<div className='puzzle'>
 					<img src={this.state.backgroundImg} alt='背景'/>
 					<img className='puzzleFrame' src={puzzleFrame} alt='拼图框'/>
-					<div className='puzzleArea'>
-						<button onClick={this.sendPuzzle}>
+					<div className='frame'>
+						<button className='restart' onClick={this.restart}>
+							重置拼图
+						</button>
+						<button className='confirm' onClick={this.sendPuzzle}>
 							确认提交
 						</button>
+					</div>
+					<div className='puzzleArea'>
 						{this.state.randomPics.map((picsNumber, index) => (
 							<Pics key={index} index={index} backgroundImage={this.state.backgroundImage} positionX={this.cutSliceX(picsNumber)} positionY={this.cutSliceY(picsNumber)}/>
 						))}
 					</div>
-					{this.props.login ? null : <Redirect to='/'/>}
+					{this.props.login ? null : null}
 				</div>
 			</CSSTransition>
 		)
