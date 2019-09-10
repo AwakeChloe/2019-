@@ -34,6 +34,7 @@ class End extends Component {
 		let input = document.getElementById('biao')
 		input.select()
 		document.execCommand('Copy', false, null)
+		alert('网页地址已复制到剪切板')
 	}
 
 	componentDidMount () {
