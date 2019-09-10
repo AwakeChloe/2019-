@@ -23,6 +23,7 @@
     position: absolute;
     color: #DCDFE1;
     font-weight: bold;
+    font-family: pingfang;
     bottom: 0;
     left: 56%;
   }
@@ -99,10 +100,11 @@
     ul {
       padding: 0;
       margin: 0;
-      position: relative;
-      top: 5%;
+      position: absolute;
+      bottom: 18%;
       overflow: scroll;
       height: 39%;
+      width: 100%;
 
       .beSelect {
         background-color: rgb(29, 72, 81);
@@ -113,7 +115,7 @@
       li {
         margin-top: 13px;
         padding-left: 7px;
-        font-size: small;
+        font-size: 15px;
         font-family: pingfang;
         color: white;
         list-style-type: none;
