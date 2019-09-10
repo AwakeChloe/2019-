@@ -40,15 +40,15 @@ class End extends Component {
 		let number = Math.floor((Math.random() * 10) + 1)
 		if (number > 4) {
 			this.setState({
-				endFrameText: 'NCUHOME会一直是你身后的驿站，在你坚定信念时，记得再来看看'
+				endFrameText: '小家园在魔镜里看见，你就是我们想要的样子。天赋异禀的小巫师，欢迎来到NCUHOME魔法学院，和我们一起干酷酷的事~'
 			})
 		} else if (number < 4) {
 			this.setState({
-				endFrameText: '欢迎来到属于你的国度，在NCUHOME，揭开你的新篇章吧!'
+				endFrameText: '你就是NCUHOME星系走失的小王子，是时候回来看看自己的玫瑰了~她究竟在哪颗星球静静地等待着你，我的小王子，你找到了吗?'
 			})
 		} else {
 			this.setState({
-				endFrameText: 'NCUHOME的大门已经敞开，你难道仍心存摇摆?'
+				endFrameText: '你就像精灵般的彗星，途径NCUHOME星系的引力场。如果你也坚信我们的缘分不仅止于擦肩，那么穿过我们的大气层下来耍耍好不好?'
 			})
 		}
 		switch (this.props.group) {

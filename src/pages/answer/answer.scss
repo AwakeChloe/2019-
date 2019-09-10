@@ -101,6 +101,8 @@
       margin: 0;
       position: relative;
       top: 5%;
+      overflow: scroll;
+      height: 39%;
 
       .beSelect {
         background-color: rgb(29, 72, 81);
@@ -123,7 +125,7 @@
       top: 12%;
       font-family: pingfang;
       color: #adf5ff;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
       margin-top: 0;
     }
   }

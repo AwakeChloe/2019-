@@ -170,7 +170,7 @@ class Answer extends Component {
 											<li onClick={this.toggle} index='3' value='C' className={this.state.selectIndex === 3 ? 'beSelect' : null}>C&#32;{item.C}</li>
 										</ul>
 										<button index={index} question={item.question} onClick={this.nextQuestion}>
-											确定提交
+											下一题
 										</button>
 									</div>
 								))}

@@ -10,7 +10,7 @@
   .numberImg {
     @include wh(7%, 1.8%);
     position: absolute;
-    top: 23%;
+    top: 24%;
     left: 16%;
     z-index: 2;
   }
@@ -39,8 +39,8 @@
 
   .copy {
     position: absolute;
-    width: 11%;
-    height: 6%;
+    width: 10%;
+    height: 5.5%;
     bottom: 11%;
     left: 75%;
   }
@@ -48,8 +48,8 @@
   h5 {
     position: absolute;
     margin: 0;
-    top: 60%;
-    width: 35%;
+    top: 62%;
+    width: 67%;
     left: 17%;
     color: #adf5ff;
   }
@@ -61,6 +61,7 @@
     left: 43%;
     color: #adf5ff;
     font-size: small;
+    font-weight: bold;
   }
 
   #biao {
