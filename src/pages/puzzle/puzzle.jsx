@@ -47,8 +47,7 @@ class Puzzle extends Component {
 		})
 		setTimeout(() => {
 			this.setState({
-				randomPics: newState.load,
-				reallyPics: newState.load
+				randomPics: newState.load
 			})
 		}, 100)
 	}
@@ -281,9 +280,9 @@ class Puzzle extends Component {
 					<img src={this.state.backgroundImg} alt='背景'/>
 					<img className='puzzleFrame' src={puzzleFrame} alt='拼图框'/>
 					<div className='frame'>
-						<button className='restart' onClick={this.restart}>
-							重置拼图
-						</button>
+						{/*<button className='restart' onClick={this.restart}>*/}
+						{/*	重置拼图*/}
+						{/*</button>*/}
 						<button className='confirm' onClick={this.sendPuzzle}>
 							确认提交
 						</button>
