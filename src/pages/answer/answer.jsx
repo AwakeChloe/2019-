@@ -161,7 +161,7 @@ class Answer extends Component {
 							<div className='swiper-wrapper'>
 								{this.state.question.map((item, index) => (
 									<div className='swiper-slide' key={index}>
-										<h3>
+										<h3 className='h3'>
 											{item.question}
 										</h3>
 										<ul>
