@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import Lottie from 'lottie-web'
 import animate from '../../assets/loading.json'
-import {Progress} from 'antd'
+// import {Progress} from 'antd'
 import 'antd/dist/antd.css'
 import './loading.scss'
 import '../../index.css'
@@ -103,7 +103,7 @@ class LottieControl extends Component {
 			'http://wx1.sinaimg.cn/mw690/005JHgrHgy1g677dcu4wzj30af0ijtaw.jpg',
 			'http://wx1.sinaimg.cn/mw690/005JHgrHgy1g677dc891jj30af0ijwg2.jpg',
 			'http://wx2.sinaimg.cn/mw690/005JHgrHgy1g677db43ijj30af0ij40v.jpg',
-			'http://wx4.sinaimg.cn/mw690/005JHgrHgy1g677damo5mj30af0ijwfs.jpg',
+			'http://wx1.sinaimg.cn/mw690/005JHgrHgy1g71poxf9p1j30ad0igjso.jpg',
 			'http://wx2.sinaimg.cn/mw690/005JHgrHgy1g677da4x7ij30af0ijwft.jpg',
 			'http://wx1.sinaimg.cn/mw690/005JHgrHgy1g677d9obdyj30af0ijq4e.jpg',
 			'http://wx4.sinaimg.cn/mw690/005JHgrHgy1g5wrvji71ej306o06o0ta.jpg',
@@ -162,10 +162,11 @@ class LottieControl extends Component {
 				classNames="fade"
 				timeout={500}
 			>
-				<div>
-					<Progress className='progress' type="circle" width={100} percent={this.state.percent} />
+				<div className='loading'>
+					{/*<Progress className='progress' type="circle" width={100} percent={this.state.percent} />*/}
 					<div id="lottie">
 					</div>
+					<img src='http://wx3.sinaimg.cn/mw690/005JHgrHgy1g6tmmi0nxsj30b40jmq3u.jpg' alt='背景'/>
 				</div>
 			</CSSTransition>
 		)
