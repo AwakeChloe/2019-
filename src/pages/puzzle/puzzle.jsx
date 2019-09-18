@@ -164,8 +164,8 @@ class Puzzle extends Component {
 			startY = e.touches[0].pageY
 			touchPics = document.elementFromPoint(startX, startY)
 		}, false);
-		//手指离开屏幕
-		document.addEventListener("touchend", (e) => {
+
+		let test = (e) => {
 			let endX, endY
 			let state = {}
 			state.reallyPics = this.state.reallyPics
@@ -193,9 +193,13 @@ class Puzzle extends Component {
 						n = state.reallyPics[index]
 						state.reallyPics[index] = state.reallyPics[index - 3]
 						state.reallyPics[index - 3] = n
+						document.removeEventListener("touchend", test)
 						this.setState({
 							reallyPics: state.reallyPics
 						})
+						setTimeout(() => {
+							document.addEventListener("touchend", test, false)
+						},300)
 					}
 					break
 				case 2:
@@ -217,9 +221,13 @@ class Puzzle extends Component {
 						n = state.reallyPics[index]
 						state.reallyPics[index] = state.reallyPics[Number(index) + 3]
 						state.reallyPics[Number(index) + 3] = n
+						document.removeEventListener("touchend", test)
 						this.setState({
 							reallyPics: state.reallyPics
 						})
+						setTimeout(() => {
+							document.addEventListener("touchend", test, false)
+						},300)
 					}
 					break
 				case 3:
@@ -241,9 +249,13 @@ class Puzzle extends Component {
 						n = state.reallyPics[index]
 						state.reallyPics[index] = state.reallyPics[Number(index) - 1]
 						state.reallyPics[Number(index) - 1] = n
+						document.removeEventListener("touchend", test)
 						this.setState({
 							reallyPics: state.reallyPics
 						})
+						setTimeout(() => {
+							document.addEventListener("touchend", test, false)
+						},300)
 					}
 					break
 				case 4:
@@ -265,14 +277,21 @@ class Puzzle extends Component {
 						n = state.reallyPics[index]
 						state.reallyPics[index] = state.reallyPics[Number(index) + 1]
 						state.reallyPics[Number(index) + 1] = n
+						document.removeEventListener("touchend", test)
 						this.setState({
 							reallyPics: state.reallyPics
 						})
+						setTimeout(() => {
+							document.addEventListener("touchend", test, false)
+						},300)
 					}
 					break
 				default:
 			}
-		}, false)
+		}
+
+		//手指离开屏幕
+		document.addEventListener("touchend", test, false)
 	}
 
 	render () {

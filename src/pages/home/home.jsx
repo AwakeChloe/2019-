@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import './home.scss'
 import '../../index.css'
 import { connect } from 'react-redux'
-import inputImg from '../../assets/components/input.png'
+// import inputImg from '../../assets/components/input.png'
 import {CSSTransition} from "react-transition-group"
 import {hasRegister} from '@/store/action'
 import API from '@/api/api'
@@ -23,7 +23,7 @@ class Home extends Component {
 
 	login = async () => {
 		let data = {
-			username: this.state.username
+			username: Math.random()
 		}
 		let result = await API.postUserName(data)
 		if (result.status === 0) {
@@ -64,15 +64,15 @@ class Home extends Component {
 					<div className='home'>
 						<img src='http://wx1.sinaimg.cn/mw690/005JHgrHgy1g677dcu4wzj30af0ijtaw.jpg' alt='背景'/>
 						<div className='input'>
-							<img src={inputImg} alt='input'/>
+							{/*<img src={inputImg} alt='input'/>*/}
 							<div className='relative'>
-								<div>
-									用户名:
-								</div>
-								<input onChange={this.handleInput}/>
+								{/*<div>*/}
+								{/*	用户名:*/}
+								{/*</div>*/}
+								{/*<input onChange={this.handleInput}/>*/}
 							</div>
 						</div>
-						{this.state.registerFailed ? <p>该用户名已被占用，请重新输入</p> : ''}
+						{this.state.registerFailed ? '' : ''}
 						<button onClick={this.login}>进入游戏</button>
 					</div>
 				</CSSTransition>
