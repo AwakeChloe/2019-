@@ -51,7 +51,9 @@ class Answer extends Component {
 				return
 			}
 			let result = await API.nextQuestion(data)
-			if (result.spark === true) {
+			let u = navigator.userAgent
+			let isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)
+			if (result.spark === true && !isIOS) {
 				this.setState(
 					{
 						leave: false
