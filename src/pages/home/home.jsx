@@ -14,17 +14,17 @@ class Home extends Component {
 		leave: true
 	}
 
-	handleInput = (event) => {
-		this.setState(
-			{
-				username: event.target.value,
-			})
+	handleInput = () => {
 	}
 
 	login = async () => {
 		let data = {
 			username: Math.random()
 		}
+		this.setState(
+			{
+				username: data.username,
+			})
 		let result = await API.postUserName(data)
 		if (result.status === 0) {
 			this.setState(
